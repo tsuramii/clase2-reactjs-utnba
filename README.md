@@ -1,7 +1,6 @@
 # Universidad Tecnológica Nacional Buenos Aires - Web Developer with React JS
 
-
-### Class 2 - Exercise
+## Class 2 - Exercise
 
 This repository contains two exercises developed during Class 2 of the "Web Developer with React JS" course at Universidad Tecnológica Nacional Buenos Aires.
 
@@ -25,3 +24,7 @@ The second exercise involves developing a basic web calculator with the followin
 - 2 input fields for operands.
 - 4 buttons for basic operators (addition, subtraction, multiplication, division).
 - When an operation is performed, the result field is updated.
+
+## Screenshot
+
+![Screenshot](./screenshot.png)
