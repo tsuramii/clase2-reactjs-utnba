@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.fluid.classless.min.css">
+</head>
+
+<body>
+    <main style="max-width: 30rem;">
+        <article style="padding: 2.5rem;">
+            <hgroup>
+                <h2>Calculadora</h2>
+                <h3>Clase 2 - Ejercicio 2 / UTNBA</h3>
+            </hgroup>
+            <input type="number" id="num1">
+            <select id="operator">
+                <option value="sum">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">*</option>
+                <option value="divide">/</option>
+            </select>
+            <input type="number" id="num2">
+            <button onclick="calcular()">Calcular</button>
+            <h3>Resultado: <span id="resultado"></span></h3>
+        </article>
+    </main>
+
+    <footer style="text-align: center;">Challenge by <a href="https://utn.edu.ar/es/" target="_blank"
+            rel="noopener noreferrer">UTN BA</a> coded
+        with ♥ by <a href="https://www.linkedin.com/in/luca-di-marco/" target="_blank" rel="noopener noreferrer">tsu</a>
+    </footer>
+    <script>
+        const calcular = () => {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const operator = document.getElementById('operator').value;
+            let resultado = 0;
+
+            switch (operator) {
+                case 'sum':
+                    resultado = num1 + num2;
+                    break;
+                case 'subtract':
+                    resultado = num1 - num2;
+                    break;
+                case 'multiply':
+                    resultado = num1 * num2;
+                    break;
+                case 'divide':
+                    if (num2 !== 0) {
+                        resultado = num1 / num2;
+                    } else {
+                        resultado = 'Error: División por cero';
+                    }
+                    break;
+                default:
+                    resultado = 'Operador no válido';
+            }
+
+            document.getElementById('resultado').textContent = resultado;
+        }
+    </script>
+</body>
+
+</html>
